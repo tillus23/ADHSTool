@@ -36,7 +36,7 @@ public class pgm {
 	}
 	
 	public static void main(String[] args) {
-		kante("/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/a.pgm"
+		kante("/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/files/a.pgm"
 			, "/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/lena_kante.pgm");
 	}
 	
