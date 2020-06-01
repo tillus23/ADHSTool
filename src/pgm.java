@@ -36,7 +36,12 @@ public class pgm {
 	}
 	
 	public static void main(String[] args) {
-		int[] pic = ADSTool.readPGM("/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/lena.pgm");
+		kante("/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/a.pgm"
+			, "/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/lena_kante.pgm");
+	}
+	
+	public static void kante(String fileIn, String fileOut) {
+		int[] pic = ADSTool.readPGM(fileIn);
 		int[] picNew = new int[pic.length];
 		int greyMax = 0;
 		int greyCur = 0;
@@ -48,12 +53,12 @@ public class pgm {
 			if(greyCur > greyMax)
 				greyMax = greyCur;
 		}
-			
+		
 		picNew[0] = pic[0];
 		picNew[1] = pic[1];
 		picNew[2] = greyMax;
 
-		ADSTool.savePGM("/Users/till/eclipse-workspace/ADS4_Aufgabe1/src/stalin.pgm", picNew);
+		ADSTool.savePGM(fileOut, picNew);
 	}
 
 }
